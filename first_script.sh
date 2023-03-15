@@ -8,5 +8,4 @@ echo "this is the PID: $$"
 ## git commit -m "comments"
 ## git push 
 
-((sum=25+35))
-echo $sum
+
