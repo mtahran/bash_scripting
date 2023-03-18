@@ -1,8 +1,7 @@
 #!/bin/bash
 
 if [ -z $1 ]; then 
-echo "error: you must enter a repo name"
-
+    echo "error: you must enter a repo name"
 else
     dir=$(find / -type d -name $1)
     cd $dir
