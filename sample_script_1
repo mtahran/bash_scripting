@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo -n "Enter your birth day (e.g., Mar 18 2021)> "
+read target_date
+today=`echo $(($(date --utc --date "$1" +%s)/86400))`
+target=`echo $(($(date --utc --date "$target_date" +%s)/86400))`
+days=`expr $today - $target`
+echo "You lived $days days so far."

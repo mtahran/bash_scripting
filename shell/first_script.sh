@@ -19,7 +19,9 @@ read y
 (( sum=x+y ))
 echo "The result of addition=$sum"
 
-
-
+read -p "Enter first number   " x
+read -p "Enter second number   " y
+(( sum=x+y ))
+echo "The result of addition=$sum"
 
 

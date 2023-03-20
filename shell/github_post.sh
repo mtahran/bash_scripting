@@ -8,6 +8,7 @@ response="$(curl -X POST \
     https://api.github.com/user/repos \
     -d '{"name" : "'"$repo_name"'" , "description" : "My repo created with api"}')"
 
+echo $response
 
 echo "Here is some information about the repo:"
 echo "Your Avatar Url : $(echo $response | jq -r .owner.avatar_url)"
