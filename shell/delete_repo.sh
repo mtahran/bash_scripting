@@ -8,6 +8,8 @@ response="$(curl -X DELETE \
     -H "Authorization: Bearer $GITHUB_TOKEN" \
     https://api.github.com/repos/$username/$repo_name)"
 
+echo $response | jq -r .message
+
 if [[ -z $(echo $response | jq -r .message) ]]; then
     echo "repository $repo_name deleted succesfully."
 else 
