@@ -2,13 +2,14 @@
 
 echo -n "Enter your birth day (e.g., Mar 18 2021)> "
 read target_date
-today=`echo $(($(date --utc --date "$1" +%s)/86400))`
-target=`echo $(($(date --utc --date "$target_date" +%s)/86400))`
-days=`expr $today - $target`
-echo ""
-echo ""
-echo "You've lived $days days (in other words $(($days/7)) weeks ) so far."
 
+today=$(($(date --utc +%s)/86400))
+target=$(($(date --utc --date "$target_date" +%s)/86400))
+days=$(expr $today - $target)
+
+echo ""
+echo ""
+echo "You've lived $days days (in other words $(($days/7)) weeks) so far."
 echo ""
 echo ""
 echo ""
